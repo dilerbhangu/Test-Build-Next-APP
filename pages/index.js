@@ -13,7 +13,7 @@ export default function Home() {
         <h1 className={styles.title}>
           Welcome to <a href="https://nextjs.org">Next.js!</a>
           <br />
-          Hello Again
+          Post Using Vercel CLI
         </h1>
 
         <p className={styles.description}>
