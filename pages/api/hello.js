@@ -1,6 +1,21 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 
-export default (req, res) => {
-  res.statusCode = 200
-  res.json({ name: 'John Doe' })
-}
+import initDB from "../../backend/initDB";
+import Product from "../../backend/models/product";
+
+initDB();
+
+export default async (req, res) => {
+  await getallProducts(req, res);
+};
+
+const getallProducts = async (req, res) => {
+  try {
+    const products = await Product.find();
+    res.json(products);
+    // res.json(products);
+    // console.log('Found Users :', products);
+  } catch (err) {
+    console.log(err);
+  }
+};
