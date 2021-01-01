@@ -13,6 +13,7 @@ const getallProducts = async (req, res) => {
   try {
     const products = await Product.find();
     res.json(products);
+    // res.json(products);
     // console.log('Found Users :', products);
   } catch (err) {
     console.log(err);
