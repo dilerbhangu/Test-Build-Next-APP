@@ -1,7 +1,7 @@
 import axios from "axios";
 export default function Home() {
   // return <div>Hello Worlddd {data[0].name}</div>;
-  return <div>Hello Worlddd {data[0].name}</div>;
+  return <div>Hello Worlddd </div>;
 }
 
 // export async function getStaticProps() {
